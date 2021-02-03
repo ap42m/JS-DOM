@@ -1,6 +1,11 @@
 const headerbtn = document.getElementById('h1color')
-const header = document.getElementById('heading')
+const myHeading = document.getElementById('heading')
+const input =document.getElementById('input')
 
-header.addEventListener('click', () =>{
-    header.style.color = "red";
-})
+myHeading.addEventListener('click', () =>{
+    myHeading.style.color = "red";
+});
+
+headerbtn.addEventListener('click', ()=>{
+    myHeading.style.color = input.value;
+});
