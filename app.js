@@ -9,3 +9,17 @@ myHeading.addEventListener('click', () =>{
 headerbtn.addEventListener('click', ()=>{
     myHeading.style.color = input.value;
 });
+const list = document.getElementsByTagName("li")
+console.log(list);
+console.log(list.length);
+
+for (const li of list) {
+    li.style.color = "red";
+    
+}
+const secondary = document.getElementsByClassName("secCol")
+console.log(secondary)
+for (const secCol of secondary) {
+    secCol.style.color = "blue"
+    
+}
