@@ -4,6 +4,7 @@ const input =document.getElementById('input')
 const addToBtn = document.getElementById('addToList')
 const listItems = document.querySelectorAll("li:last-child")
 let list2 = document.getElementById('fruits')
+const remover = document.getElementById("remover")
 myHeading.addEventListener('click', () =>{
     myHeading.style.color = "red";
 });
@@ -29,4 +30,8 @@ addToBtn.addEventListener('click', ()=>{
     listItem.textContent = input2.value;
     list2.appendChild(listItem);
     input2.value = "";
+})
+remover.addEventListener('click', ()=>{
+    let lastItem= document.querySelector('li:last-child')
+    list2.removeChild(lastItem)
 })
