@@ -1,7 +1,9 @@
 const headerbtn = document.getElementById('h1color')
 const myHeading = document.getElementById('heading')
 const input =document.getElementById('input')
-
+const addToBtn = document.getElementById('addToList')
+const listItems = document.querySelectorAll("li:last-child")
+let list2 = document.getElementById('fruits')
 myHeading.addEventListener('click', () =>{
     myHeading.style.color = "red";
 });
@@ -20,6 +22,11 @@ for (const li of list) {
 const secondary = document.getElementsByClassName("secCol")
 console.log(secondary)
 for (const secCol of secondary) {
-    secCol.style.color = "blue"
-    
+    secCol.style.color = "blue";
 }
+addToBtn.addEventListener('click', ()=>{
+    let listItem = document.createElement("li")
+    listItem.textContent = input2.value;
+    list2.appendChild(listItem);
+    input2.value = "";
+})
